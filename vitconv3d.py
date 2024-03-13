@@ -200,24 +200,3 @@ class TSViTcls_conv3d(nn.Module):
 		
 		return x
 	
-if __name__ == "__main__":
-	# res = 24
-	# model_config = {'img_res': res, 'patch_size': 3, 'patch_size_time': 1, 'patch_time': 4, 'num_classes': 20,
-	# 				'max_seq_len': 16, 'dim': 128, 'temporal_depth': 10, 'spatial_depth': 4, 'depth': 4,
-	# 				'heads': 3, 'pool': 'cls', 'num_channels': 14, 'dim_head': 64, 'dropout': 0., 'emb_dropout': 0.,
-	# 				'scale_dim': 4}
-	model_config = {'img_size_w': 4, 'img_size_h': 6, 'patch_size_w': 1, 'patch_size_h': 2, 'patch_size_time': 1, 'patch_time': 4, 'num_classes': 2,
-					'max_seq_len': 750, 'dim': 128, 'temporal_depth': 6, 'spatial_depth': 4, 'depth': 4,
-					'heads': 3, 'pool': 'cls', 'num_channels': 3, 'dim_head': 64, 'dropout': 0., 'emb_dropout': 0.,
-					'scale_dim': 4}
-	# train_config = {'dataset': "psetae_repl_2018_100_3", 'label_map': "labels_20k2k", 'max_seq_len': 16, 'batch_size': 5,
-	# 				'extra_data': [], 'num_workers': 4}
-
-	model = TSViTcls_uSkin(model_config)#.cuda()
-	parameters = filter(lambda p: p.requires_grad, model.parameters())
-	parameters = sum([np.prod(p.size()) for p in parameters]) / 1_000_000
-	print('Trainable Parameters: %.3fM' % parameters)
-	img = torch.rand((2, 750, 3, 4, 6))#.cuda()
-	out = model(img)
-	print("Shape of out :", out.shape)  # [B, num_classes]
-	pdb.set_trace()
