@@ -1,0 +1,107 @@
+wandb_version: 1
+
+ReOnPl_factor:
+  desc: null
+  value: 0.8
+ReOnPl_patience:
+  desc: null
+  value: 3
+batch_size:
+  desc: null
+  value: 512
+depth:
+  desc: null
+  value: 6
+dropout:
+  desc: null
+  value: 0
+emb_dropout:
+  desc: null
+  value: 0
+heads:
+  desc: null
+  value: 2
+image_size_h:
+  desc: null
+  value: 6
+image_size_w:
+  desc: null
+  value: 4
+layer_norm:
+  desc: null
+  value: 0
+lr:
+  desc: null
+  value: 0.0001
+lr_schduler:
+  desc: null
+  value: 0
+max_seq_len:
+  desc: null
+  value: 750
+num_channels:
+  desc: null
+  value: 6
+num_classes:
+  desc: null
+  value: 2
+out_channels:
+  desc: null
+  value: 32
+patch_size_d:
+  desc: null
+  value: 150
+patch_size_h:
+  desc: null
+  value: 6
+patch_size_w:
+  desc: null
+  value: 4
+scale_dim:
+  desc: null
+  value: 4
+spatial_depth:
+  desc: null
+  value: 1
+temporal_depth:
+  desc: null
+  value: 1
+weight_decay:
+  desc: null
+  value: 0
+_wandb:
+  desc: null
+  value:
+    python_version: 3.11.4
+    cli_version: 0.15.12
+    framework: lightning
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1708569049.704646
+    t:
+      1:
+      - 1
+      - 5
+      - 9
+      - 41
+      - 50
+      - 53
+      - 55
+      2:
+      - 1
+      - 5
+      - 9
+      - 41
+      - 50
+      - 53
+      - 55
+      3:
+      - 1
+      - 2
+      - 23
+      - 37
+      4: 3.11.4
+      5: 0.15.12
+      8:
+      - 5
+      13: linux-x86_64
